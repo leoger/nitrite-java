@@ -70,7 +70,7 @@ public abstract class GeoSpatialTestBase {
     }
 
     @SneakyThrows
-    private static Point readPoint(String wkt) {
+    protected static Point readPoint(String wkt) {
         return (Point) reader.read(wkt);
     }
 
