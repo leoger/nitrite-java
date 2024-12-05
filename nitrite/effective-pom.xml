@@ -20,7 +20,7 @@
   <groupId>org.dizitart</groupId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 5 -->
   <artifactId>nitrite</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 10 -->
   <version>4.3.1-SNAPSHOT</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 7 -->
-  <name>Nitrite</name>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 13 -->
+  <name>Nitrite Core Library</name>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 13 -->
   <description>Nitrite is an open source embedded NoSQL database for Java.</description>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 11 -->
   <url>https://nitrite.dizitart.com/nitrite</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 13 -->
   <licenses>
@@ -44,13 +44,13 @@
   </scm>
   <distributionManagement>
     <repository>
-      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 546 -->
-      <name>Nexus Release Repository</name>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 547 -->
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 548 -->
+      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 553 -->
+      <name>Nexus Release Repository</name>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 554 -->
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 555 -->
     </repository>
     <snapshotRepository>
-      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 541 -->
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 542 -->
+      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 548 -->
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 549 -->
     </snapshotRepository>
   </distributionManagement>
   <properties>
@@ -457,14 +457,14 @@
   <repositories>
     <repository>
       <releases>
-        <enabled>false</enabled>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 240 -->
+        <enabled>false</enabled>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 564 -->
       </releases>
       <snapshots>
-        <enabled>true</enabled>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 241 -->
+        <enabled>true</enabled>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 565 -->
       </snapshots>
-      <id>sonatype-nexus-snapshots</id>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 237 -->
-      <name>Sonatype Nexus Snapshots</name>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 238 -->
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 239 -->
+      <id>sonatype-nexus-snapshots</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 561 -->
+      <name>Sonatype Nexus Snapshots</name>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 562 -->
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 563 -->
     </repository>
     <repository>
       <snapshots>
@@ -551,7 +551,6 @@
               <groupId>org.projectlombok</groupId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 314 -->
               <artifactId>lombok</artifactId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 315 -->
               <version>1.18.34</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 316 -->
-              <scope>compile</scope>
             </dependency>
           </dependencies>
         </plugin>
@@ -747,38 +746,227 @@
     </pluginManagement>
     <plugins>
       <plugin>
-        <groupId>org.projectlombok</groupId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 131 -->
-        <artifactId>lombok-maven-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 132 -->
-        <version>1.18.20.0</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 311 -->
+        <groupId>org.jacoco</groupId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 131 -->
+        <artifactId>jacoco-maven-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 132 -->
+        <version>0.8.12</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 376 -->
         <executions>
           <execution>
-            <id>delombok</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 321 -->
-            <phase>generate-sources</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 322 -->
             <goals>
-              <goal>delombok</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 324 -->
+              <goal>prepare-agent</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 380 -->
             </goals>
             <configuration>
-              <sourceDirectory>C:\Users\Leo\workspace\nitrite-java\nitrite/src/main/java</sourceDirectory>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 327 -->
-              <outputDirectory>C:\Users\Leo\workspace\nitrite-java\nitrite\target/delombok</outputDirectory>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 328 -->
-              <addOutputDirectory>false</addOutputDirectory>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 329 -->
-              <formatPreferences>
-                <javaLangAsFQN>skip</javaLangAsFQN>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 331 -->
-              </formatPreferences>
-              <verbose>false</verbose>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 333 -->
+              <excludes>
+                <exclude>**/index/fulltext/languages/*</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 135 -->
+              </excludes>
+            </configuration>
+          </execution>
+          <execution>
+            <id>report</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 384 -->
+            <phase>test</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 385 -->
+            <goals>
+              <goal>report</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 387 -->
+            </goals>
+            <configuration>
+              <excludes>
+                <exclude>**/index/fulltext/languages/*</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 135 -->
+              </excludes>
             </configuration>
           </execution>
         </executions>
-        <dependencies>
-          <dependency>
-            <groupId>org.projectlombok</groupId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 314 -->
-            <artifactId>lombok</artifactId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 315 -->
-            <version>1.18.34</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 316 -->
-            <scope>compile</scope>
-          </dependency>
-        </dependencies>
+        <configuration>
+          <excludes>
+            <exclude>**/index/fulltext/languages/*</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 135 -->
+          </excludes>
+        </configuration>
       </plugin>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 136 -->
+        <artifactId>maven-javadoc-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 141 -->
+        <version>3.11.1</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 395 -->
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 402 -->
+            <phase>package</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 403 -->
+            <goals>
+              <goal>jar</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 405 -->
+            </goals>
+            <configuration>
+              <show>public</show>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 408 -->
+              <excludePackageNames>org.dizitart.no2.collection.operation,
+                        org.dizitart.no2.common.concurrent,
+                        org.dizitart.no2.common.event,
+                        org.dizitart.no2.common.streams,
+                        org.dizitart.no2.common.util,
+                        org.dizitart.no2.index.fulltext.languages,
+                        org.dizitart.no2.migration.commands,
+                        org.dizitart.no2.store.memory,</excludePackageNames>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 143 -->
+              <sourceFileExcludes>
+                <exclude>**/*Factory.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 154 -->
+                <exclude>**/*DefaultNitriteCollection.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 155 -->
+                <exclude>**/*SnowflakeIdGenerator.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 156 -->
+                <exclude>**/*AttributesAware.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 157 -->
+                <exclude>**/*PluginManager.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 158 -->
+                <exclude>**/*ProcessorChain.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 159 -->
+                <exclude>**/*Constants.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 160 -->
+                <exclude>**/*DBNull.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 161 -->
+                <exclude>**/*DBValue.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 162 -->
+                <exclude>**/*UnknownType.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 163 -->
+                <exclude>**/*AndFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 164 -->
+                <exclude>**/*OrFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 165 -->
+                <exclude>**/*BetweenFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 166 -->
+                <exclude>**/*ComparableArrayFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 167 -->
+                <exclude>**/*ElementMatchFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 168 -->
+                <exclude>**/*EqualsFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 169 -->
+                <exclude>**/*TextFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 170 -->
+                <exclude>**/*ComparableIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 171 -->
+                <exclude>**/*CompoundIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 172 -->
+                <exclude>**/*IndexMap.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 173 -->
+                <exclude>**/*IndexMeta.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 174 -->
+                <exclude>**/*IndexScanner.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 175 -->
+                <exclude>**/*NitriteTextIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 176 -->
+                <exclude>**/*NonUniqueIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 177 -->
+                <exclude>**/*SingleFieldIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 178 -->
+                <exclude>**/*TextIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 179 -->
+                <exclude>**/*UniqueIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 180 -->
+                <exclude>**/*MigrationManager.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 181 -->
+                <exclude>**/*EntityDecoratorScanner.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 182 -->
+                <exclude>**/*IndexValidator.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 183 -->
+                <exclude>**/*ObjectCursor.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 184 -->
+                <exclude>**/*RepositoryOperations.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 185 -->
+                <exclude>**/*EventBus.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 186 -->
+                <exclude>**/*MetaData.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 187 -->
+                <exclude>**/*UserAuthenticationService.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 188 -->
+                <exclude>**/*UserCredential.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 189 -->
+              </sourceFileExcludes>
+              <sourcepath>C:\Users\Leo\workspace\nitrite-java\nitrite\target/delombok</sourcepath>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 397 -->
+              <doclint>none</doclint>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 398 -->
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <excludePackageNames>org.dizitart.no2.collection.operation,
+                        org.dizitart.no2.common.concurrent,
+                        org.dizitart.no2.common.event,
+                        org.dizitart.no2.common.streams,
+                        org.dizitart.no2.common.util,
+                        org.dizitart.no2.index.fulltext.languages,
+                        org.dizitart.no2.migration.commands,
+                        org.dizitart.no2.store.memory,</excludePackageNames>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 143 -->
+          <sourceFileExcludes>
+            <exclude>**/*Factory.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 154 -->
+            <exclude>**/*DefaultNitriteCollection.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 155 -->
+            <exclude>**/*SnowflakeIdGenerator.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 156 -->
+            <exclude>**/*AttributesAware.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 157 -->
+            <exclude>**/*PluginManager.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 158 -->
+            <exclude>**/*ProcessorChain.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 159 -->
+            <exclude>**/*Constants.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 160 -->
+            <exclude>**/*DBNull.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 161 -->
+            <exclude>**/*DBValue.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 162 -->
+            <exclude>**/*UnknownType.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 163 -->
+            <exclude>**/*AndFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 164 -->
+            <exclude>**/*OrFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 165 -->
+            <exclude>**/*BetweenFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 166 -->
+            <exclude>**/*ComparableArrayFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 167 -->
+            <exclude>**/*ElementMatchFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 168 -->
+            <exclude>**/*EqualsFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 169 -->
+            <exclude>**/*TextFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 170 -->
+            <exclude>**/*ComparableIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 171 -->
+            <exclude>**/*CompoundIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 172 -->
+            <exclude>**/*IndexMap.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 173 -->
+            <exclude>**/*IndexMeta.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 174 -->
+            <exclude>**/*IndexScanner.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 175 -->
+            <exclude>**/*NitriteTextIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 176 -->
+            <exclude>**/*NonUniqueIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 177 -->
+            <exclude>**/*SingleFieldIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 178 -->
+            <exclude>**/*TextIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 179 -->
+            <exclude>**/*UniqueIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 180 -->
+            <exclude>**/*MigrationManager.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 181 -->
+            <exclude>**/*EntityDecoratorScanner.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 182 -->
+            <exclude>**/*IndexValidator.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 183 -->
+            <exclude>**/*ObjectCursor.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 184 -->
+            <exclude>**/*RepositoryOperations.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 185 -->
+            <exclude>**/*EventBus.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 186 -->
+            <exclude>**/*MetaData.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 187 -->
+            <exclude>**/*UserAuthenticationService.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 188 -->
+            <exclude>**/*UserCredential.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 189 -->
+          </sourceFileExcludes>
+          <sourcepath>C:\Users\Leo\workspace\nitrite-java\nitrite\target/delombok</sourcepath>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 397 -->
+          <doclint>none</doclint>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 398 -->
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 195 -->
+        <version>3.3.1</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 416 -->
+        <executions>
+          <execution>
+            <id>attach-sources</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 419 -->
+            <goals>
+              <goal>jar-no-fork</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 421 -->
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 199 -->
+        <version>3.3.0</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+        <executions>
+          <execution>
+            <id>default-jar</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <phase>package</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <goals>
+              <goal>jar</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            </goals>
+            <configuration>
+              <archive combine.children="append">
+                <manifestEntries>
+                  <Automatic-Module-Name>org.dizitart.no2</Automatic-Module-Name>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 203 -->
+                </manifestEntries>
+              </archive>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <archive combine.children="append">
+            <manifestEntries>
+              <Automatic-Module-Name>org.dizitart.no2</Automatic-Module-Name>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 203 -->
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+        <version>3.2.0</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+        <executions>
+          <execution>
+            <id>default-clean</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <phase>clean</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <goals>
+              <goal>clean</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+        <version>3.3.1</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+        <executions>
+          <execution>
+            <id>default-testResources</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <phase>process-test-resources</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <goals>
+              <goal>testResources</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            </goals>
+          </execution>
+          <execution>
+            <id>default-resources</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <phase>process-resources</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <goals>
+              <goal>resources</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 340 -->
         <version>3.13.0</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 341 -->
         <executions>
           <execution>
@@ -864,7 +1052,7 @@
         </configuration>
       </plugin>
       <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 140 -->
+        <artifactId>maven-surefire-plugin</artifactId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 367 -->
         <version>3.5.2</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 368 -->
         <executions>
           <execution>
@@ -883,295 +1071,6 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.jacoco</groupId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 143 -->
-        <artifactId>jacoco-maven-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 144 -->
-        <version>0.8.12</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 376 -->
-        <executions>
-          <execution>
-            <goals>
-              <goal>prepare-agent</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 380 -->
-            </goals>
-            <configuration>
-              <excludes>
-                <exclude>**/index/fulltext/languages/*</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 147 -->
-              </excludes>
-            </configuration>
-          </execution>
-          <execution>
-            <id>report</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 384 -->
-            <phase>test</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 385 -->
-            <goals>
-              <goal>report</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 387 -->
-            </goals>
-            <configuration>
-              <excludes>
-                <exclude>**/index/fulltext/languages/*</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 147 -->
-              </excludes>
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <excludes>
-            <exclude>**/index/fulltext/languages/*</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 147 -->
-          </excludes>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 153 -->
-        <version>3.11.1</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 395 -->
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 402 -->
-            <phase>package</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 403 -->
-            <goals>
-              <goal>jar</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 405 -->
-            </goals>
-            <configuration>
-              <show>public</show>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 408 -->
-              <excludePackageNames>org.dizitart.no2.collection.operation,
-                        org.dizitart.no2.common.concurrent,
-                        org.dizitart.no2.common.event,
-                        org.dizitart.no2.common.streams,
-                        org.dizitart.no2.common.util,
-                        org.dizitart.no2.index.fulltext.languages,
-                        org.dizitart.no2.migration.commands,
-                        org.dizitart.no2.store.memory,</excludePackageNames>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 155 -->
-              <sourceFileExcludes>
-                <exclude>**/*Factory.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 166 -->
-                <exclude>**/*DefaultNitriteCollection.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 167 -->
-                <exclude>**/*SnowflakeIdGenerator.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 168 -->
-                <exclude>**/*AttributesAware.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 169 -->
-                <exclude>**/*PluginManager.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 170 -->
-                <exclude>**/*ProcessorChain.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 171 -->
-                <exclude>**/*Constants.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 172 -->
-                <exclude>**/*DBNull.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 173 -->
-                <exclude>**/*DBValue.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 174 -->
-                <exclude>**/*UnknownType.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 175 -->
-                <exclude>**/*AndFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 176 -->
-                <exclude>**/*OrFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 177 -->
-                <exclude>**/*BetweenFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 178 -->
-                <exclude>**/*ComparableArrayFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 179 -->
-                <exclude>**/*ElementMatchFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 180 -->
-                <exclude>**/*EqualsFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 181 -->
-                <exclude>**/*TextFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 182 -->
-                <exclude>**/*ComparableIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 183 -->
-                <exclude>**/*CompoundIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 184 -->
-                <exclude>**/*IndexMap.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 185 -->
-                <exclude>**/*IndexMeta.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 186 -->
-                <exclude>**/*IndexScanner.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 187 -->
-                <exclude>**/*NitriteTextIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 188 -->
-                <exclude>**/*NonUniqueIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 189 -->
-                <exclude>**/*SingleFieldIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 190 -->
-                <exclude>**/*TextIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 191 -->
-                <exclude>**/*UniqueIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 192 -->
-                <exclude>**/*MigrationManager.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 193 -->
-                <exclude>**/*EntityDecoratorScanner.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 194 -->
-                <exclude>**/*IndexValidator.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 195 -->
-                <exclude>**/*ObjectCursor.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 196 -->
-                <exclude>**/*RepositoryOperations.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 197 -->
-                <exclude>**/*EventBus.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 198 -->
-                <exclude>**/*MetaData.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 199 -->
-                <exclude>**/*UserAuthenticationService.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 200 -->
-                <exclude>**/*UserCredential.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 201 -->
-              </sourceFileExcludes>
-              <sourcepath>C:\Users\Leo\workspace\nitrite-java\nitrite\target/delombok</sourcepath>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 397 -->
-              <doclint>none</doclint>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 398 -->
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <excludePackageNames>org.dizitart.no2.collection.operation,
-                        org.dizitart.no2.common.concurrent,
-                        org.dizitart.no2.common.event,
-                        org.dizitart.no2.common.streams,
-                        org.dizitart.no2.common.util,
-                        org.dizitart.no2.index.fulltext.languages,
-                        org.dizitart.no2.migration.commands,
-                        org.dizitart.no2.store.memory,</excludePackageNames>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 155 -->
-          <sourceFileExcludes>
-            <exclude>**/*Factory.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 166 -->
-            <exclude>**/*DefaultNitriteCollection.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 167 -->
-            <exclude>**/*SnowflakeIdGenerator.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 168 -->
-            <exclude>**/*AttributesAware.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 169 -->
-            <exclude>**/*PluginManager.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 170 -->
-            <exclude>**/*ProcessorChain.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 171 -->
-            <exclude>**/*Constants.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 172 -->
-            <exclude>**/*DBNull.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 173 -->
-            <exclude>**/*DBValue.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 174 -->
-            <exclude>**/*UnknownType.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 175 -->
-            <exclude>**/*AndFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 176 -->
-            <exclude>**/*OrFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 177 -->
-            <exclude>**/*BetweenFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 178 -->
-            <exclude>**/*ComparableArrayFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 179 -->
-            <exclude>**/*ElementMatchFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 180 -->
-            <exclude>**/*EqualsFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 181 -->
-            <exclude>**/*TextFilter.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 182 -->
-            <exclude>**/*ComparableIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 183 -->
-            <exclude>**/*CompoundIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 184 -->
-            <exclude>**/*IndexMap.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 185 -->
-            <exclude>**/*IndexMeta.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 186 -->
-            <exclude>**/*IndexScanner.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 187 -->
-            <exclude>**/*NitriteTextIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 188 -->
-            <exclude>**/*NonUniqueIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 189 -->
-            <exclude>**/*SingleFieldIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 190 -->
-            <exclude>**/*TextIndex.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 191 -->
-            <exclude>**/*UniqueIndexer.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 192 -->
-            <exclude>**/*MigrationManager.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 193 -->
-            <exclude>**/*EntityDecoratorScanner.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 194 -->
-            <exclude>**/*IndexValidator.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 195 -->
-            <exclude>**/*ObjectCursor.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 196 -->
-            <exclude>**/*RepositoryOperations.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 197 -->
-            <exclude>**/*EventBus.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 198 -->
-            <exclude>**/*MetaData.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 199 -->
-            <exclude>**/*UserAuthenticationService.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 200 -->
-            <exclude>**/*UserCredential.java</exclude>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 201 -->
-          </sourceFileExcludes>
-          <sourcepath>C:\Users\Leo\workspace\nitrite-java\nitrite\target/delombok</sourcepath>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 397 -->
-          <doclint>none</doclint>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 398 -->
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-source-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 207 -->
-        <version>3.3.1</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 416 -->
-        <executions>
-          <execution>
-            <id>attach-sources</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 419 -->
-            <goals>
-              <goal>jar-no-fork</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 421 -->
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-gpg-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 211 -->
-        <version>3.2.7</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 495 -->
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 498 -->
-            <phase>verify</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 499 -->
-            <goals>
-              <goal>sign</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 501 -->
-            </goals>
-            <configuration>
-              <gpgArguments>
-                <arg>--pinentry-mode</arg>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 505 -->
-                <arg>loopback</arg>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 506 -->
-              </gpgArguments>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 214 -->
-        <artifactId>animal-sniffer-maven-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 215 -->
-        <version>1.24</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 429 -->
-        <executions>
-          <execution>
-            <id>check-android-compat</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 435 -->
-            <phase>test</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 436 -->
-            <goals>
-              <goal>check</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 438 -->
-            </goals>
-            <configuration>
-              <signature>
-                <groupId>net.sf.androidscents.signature</groupId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 442 -->
-                <artifactId>android-api-level-24</artifactId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 443 -->
-                <version>7.0_r2</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 444 -->
-              </signature>
-              <jdk>11</jdk>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 431 -->
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <jdk>11</jdk>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 431 -->
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 218 -->
-        <artifactId>nexus-staging-maven-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 219 -->
-        <version>1.7.0</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 515 -->
-        <extensions>true</extensions>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 516 -->
-        <executions>
-          <execution>
-            <id>injected-nexus-deploy</id>
-            <phase>deploy</phase>
-            <goals>
-              <goal>deploy</goal>
-            </goals>
-            <configuration>
-              <serverId>ossrh</serverId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 518 -->
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 519 -->
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 520 -->
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <serverId>ossrh</serverId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 518 -->
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 519 -->
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 520 -->
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 223 -->
-        <version>3.3.0</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-        <executions>
-          <execution>
-            <id>default-jar</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <phase>package</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <goals>
-              <goal>jar</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            </goals>
-            <configuration>
-              <archive combine.children="append">
-                <manifestEntries>
-                  <Automatic-Module-Name>org.dizitart.no2</Automatic-Module-Name>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 227 -->
-                </manifestEntries>
-              </archive>
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <archive combine.children="append">
-            <manifestEntries>
-              <Automatic-Module-Name>org.dizitart.no2</Automatic-Module-Name>  <!-- org.dizitart:nitrite:4.3.1-SNAPSHOT, line 227 -->
-            </manifestEntries>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-clean-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-        <version>3.2.0</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-        <executions>
-          <execution>
-            <id>default-clean</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <phase>clean</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <goals>
-              <goal>clean</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-        <version>3.3.1</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-        <executions>
-          <execution>
-            <id>default-testResources</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <phase>process-test-resources</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <goals>
-              <goal>testResources</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            </goals>
-          </execution>
-          <execution>
-            <id>default-resources</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <phase>process-resources</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <goals>
-              <goal>resources</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
         <artifactId>maven-install-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <version>3.1.1</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <executions>
@@ -1187,6 +1086,15 @@
       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <version>3.1.1</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+        <executions>
+          <execution>
+            <id>default-deploy</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <phase>deploy</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <goals>
+              <goal>deploy</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <artifactId>maven-site-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->

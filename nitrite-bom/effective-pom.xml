@@ -46,13 +46,13 @@
   </scm>
   <distributionManagement>
     <repository>
-      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 546 -->
-      <name>Nexus Release Repository</name>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 547 -->
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 548 -->
+      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 553 -->
+      <name>Nexus Release Repository</name>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 554 -->
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 555 -->
     </repository>
     <snapshotRepository>
-      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 541 -->
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 542 -->
+      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 548 -->
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 549 -->
     </snapshotRepository>
   </distributionManagement>
   <properties>
@@ -337,14 +337,14 @@
   <repositories>
     <repository>
       <releases>
-        <enabled>false</enabled>  <!-- org.dizitart:nitrite-bom:4.3.1-SNAPSHOT, line 66 -->
+        <enabled>false</enabled>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 564 -->
       </releases>
       <snapshots>
-        <enabled>true</enabled>  <!-- org.dizitart:nitrite-bom:4.3.1-SNAPSHOT, line 67 -->
+        <enabled>true</enabled>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 565 -->
       </snapshots>
-      <id>sonatype-nexus-snapshots</id>  <!-- org.dizitart:nitrite-bom:4.3.1-SNAPSHOT, line 63 -->
-      <name>Sonatype Nexus Snapshots</name>  <!-- org.dizitart:nitrite-bom:4.3.1-SNAPSHOT, line 64 -->
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-bom:4.3.1-SNAPSHOT, line 65 -->
+      <id>sonatype-nexus-snapshots</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 561 -->
+      <name>Sonatype Nexus Snapshots</name>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 562 -->
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 563 -->
     </repository>
     <repository>
       <snapshots>
@@ -626,50 +626,6 @@
     </pluginManagement>
     <plugins>
       <plugin>
-        <artifactId>maven-gpg-plugin</artifactId>  <!-- org.dizitart:nitrite-bom:4.3.1-SNAPSHOT, line 75 -->
-        <version>3.2.7</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 495 -->
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 498 -->
-            <phase>verify</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 499 -->
-            <goals>
-              <goal>sign</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 501 -->
-            </goals>
-            <configuration>
-              <gpgArguments>
-                <arg>--pinentry-mode</arg>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 505 -->
-                <arg>loopback</arg>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 506 -->
-              </gpgArguments>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>  <!-- org.dizitart:nitrite-bom:4.3.1-SNAPSHOT, line 78 -->
-        <artifactId>nexus-staging-maven-plugin</artifactId>  <!-- org.dizitart:nitrite-bom:4.3.1-SNAPSHOT, line 79 -->
-        <version>1.7.0</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 515 -->
-        <extensions>true</extensions>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 516 -->
-        <executions>
-          <execution>
-            <id>injected-nexus-deploy</id>
-            <phase>deploy</phase>
-            <goals>
-              <goal>deploy</goal>
-            </goals>
-            <configuration>
-              <serverId>ossrh</serverId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 518 -->
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 519 -->
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 520 -->
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <serverId>ossrh</serverId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 518 -->
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 519 -->
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 520 -->
-        </configuration>
-      </plugin>
-      <plugin>
         <artifactId>maven-clean-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <version>3.2.0</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <executions>
@@ -698,6 +654,15 @@
       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <version>3.1.1</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+        <executions>
+          <execution>
+            <id>default-deploy</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <phase>deploy</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <goals>
+              <goal>deploy</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <artifactId>maven-site-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->

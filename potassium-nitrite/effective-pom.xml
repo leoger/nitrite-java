@@ -45,13 +45,13 @@
   </scm>
   <distributionManagement>
     <repository>
-      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 546 -->
-      <name>Nexus Release Repository</name>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 547 -->
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 548 -->
+      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 553 -->
+      <name>Nexus Release Repository</name>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 554 -->
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 555 -->
     </repository>
     <snapshotRepository>
-      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 541 -->
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 542 -->
+      <id>ossrh</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 548 -->
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 549 -->
     </snapshotRepository>
   </distributionManagement>
   <properties>
@@ -471,14 +471,14 @@
   <repositories>
     <repository>
       <releases>
-        <enabled>false</enabled>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 192 -->
+        <enabled>false</enabled>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 564 -->
       </releases>
       <snapshots>
-        <enabled>true</enabled>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 193 -->
+        <enabled>true</enabled>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 565 -->
       </snapshots>
-      <id>sonatype-nexus-snapshots</id>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 189 -->
-      <name>Sonatype Nexus Snapshots</name>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 190 -->
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 191 -->
+      <id>sonatype-nexus-snapshots</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 561 -->
+      <name>Sonatype Nexus Snapshots</name>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 562 -->
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 563 -->
     </repository>
     <repository>
       <snapshots>
@@ -565,7 +565,6 @@
               <groupId>org.projectlombok</groupId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 314 -->
               <artifactId>lombok</artifactId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 315 -->
               <version>1.18.34</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 316 -->
-              <scope>compile</scope>
             </dependency>
           </dependencies>
         </plugin>
@@ -858,58 +857,8 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.projectlombok</groupId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 146 -->
-        <artifactId>lombok-maven-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 147 -->
-        <version>1.18.20.0</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 311 -->
-        <executions>
-          <execution>
-            <id>delombok</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 321 -->
-            <phase>generate-sources</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 322 -->
-            <goals>
-              <goal>delombok</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 324 -->
-            </goals>
-            <configuration>
-              <sourceDirectory>C:\Users\Leo\workspace\nitrite-java\potassium-nitrite/src/main/java</sourceDirectory>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 327 -->
-              <outputDirectory>C:\Users\Leo\workspace\nitrite-java\potassium-nitrite\target/delombok</outputDirectory>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 328 -->
-              <addOutputDirectory>false</addOutputDirectory>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 329 -->
-              <formatPreferences>
-                <javaLangAsFQN>skip</javaLangAsFQN>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 331 -->
-              </formatPreferences>
-              <verbose>false</verbose>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 333 -->
-            </configuration>
-          </execution>
-        </executions>
-        <dependencies>
-          <dependency>
-            <groupId>org.projectlombok</groupId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 314 -->
-            <artifactId>lombok</artifactId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 315 -->
-            <version>1.18.34</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 316 -->
-            <scope>compile</scope>
-          </dependency>
-        </dependencies>
-      </plugin>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 151 -->
-        <version>3.5.2</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 368 -->
-        <executions>
-          <execution>
-            <id>default-test</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <phase>test</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            <goals>
-              <goal>test</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
-            </goals>
-            <configuration>
-              <argLine>@{argLine} -Duser.language=en -Duser.region=US</argLine>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 370 -->
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <argLine>@{argLine} -Duser.language=en -Duser.region=US</argLine>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 370 -->
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 154 -->
-        <artifactId>jacoco-maven-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 155 -->
+        <groupId>org.jacoco</groupId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 146 -->
+        <artifactId>jacoco-maven-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 147 -->
         <version>0.8.12</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 376 -->
         <executions>
           <execution>
@@ -927,88 +876,7 @@
         </executions>
       </plugin>
       <plugin>
-        <artifactId>maven-source-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 159 -->
-        <version>3.3.1</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 416 -->
-        <executions>
-          <execution>
-            <id>attach-sources</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 419 -->
-            <goals>
-              <goal>jar-no-fork</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 421 -->
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 162 -->
-        <artifactId>animal-sniffer-maven-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 163 -->
-        <version>1.24</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 429 -->
-        <executions>
-          <execution>
-            <id>check-android-compat</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 435 -->
-            <phase>test</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 436 -->
-            <goals>
-              <goal>check</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 438 -->
-            </goals>
-            <configuration>
-              <signature>
-                <groupId>net.sf.androidscents.signature</groupId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 442 -->
-                <artifactId>android-api-level-24</artifactId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 443 -->
-                <version>7.0_r2</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 444 -->
-              </signature>
-              <jdk>11</jdk>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 431 -->
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <jdk>11</jdk>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 431 -->
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-gpg-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 167 -->
-        <version>3.2.7</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 495 -->
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 498 -->
-            <phase>verify</phase>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 499 -->
-            <goals>
-              <goal>sign</goal>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 501 -->
-            </goals>
-            <configuration>
-              <gpgArguments>
-                <arg>--pinentry-mode</arg>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 505 -->
-                <arg>loopback</arg>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 506 -->
-              </gpgArguments>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 170 -->
-        <artifactId>nexus-staging-maven-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 171 -->
-        <version>1.7.0</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 515 -->
-        <extensions>true</extensions>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 516 -->
-        <executions>
-          <execution>
-            <id>injected-nexus-deploy</id>
-            <phase>deploy</phase>
-            <goals>
-              <goal>deploy</goal>
-            </goals>
-            <configuration>
-              <serverId>ossrh</serverId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 518 -->
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 519 -->
-              <autoReleaseAfterClose>true</autoReleaseAfterClose>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 520 -->
-            </configuration>
-          </execution>
-        </executions>
-        <configuration>
-          <serverId>ossrh</serverId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 518 -->
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 519 -->
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 520 -->
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 175 -->
+        <artifactId>maven-jar-plugin</artifactId>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 151 -->
         <version>3.3.0</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <executions>
           <execution>
@@ -1020,7 +888,7 @@
             <configuration>
               <archive combine.children="append">
                 <manifestEntries>
-                  <Automatic-Module-Name>org.dizitart.kno2</Automatic-Module-Name>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 179 -->
+                  <Automatic-Module-Name>org.dizitart.kno2</Automatic-Module-Name>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 155 -->
                 </manifestEntries>
               </archive>
             </configuration>
@@ -1029,7 +897,7 @@
         <configuration>
           <archive combine.children="append">
             <manifestEntries>
-              <Automatic-Module-Name>org.dizitart.kno2</Automatic-Module-Name>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 179 -->
+              <Automatic-Module-Name>org.dizitart.kno2</Automatic-Module-Name>  <!-- org.dizitart:potassium-nitrite:4.3.1-SNAPSHOT, line 155 -->
             </manifestEntries>
           </archive>
         </configuration>
@@ -1154,6 +1022,25 @@
         </configuration>
       </plugin>
       <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 367 -->
+        <version>3.5.2</version>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 368 -->
+        <executions>
+          <execution>
+            <id>default-test</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <phase>test</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <goals>
+              <goal>test</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            </goals>
+            <configuration>
+              <argLine>@{argLine} -Duser.language=en -Duser.region=US</argLine>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 370 -->
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <argLine>@{argLine} -Duser.language=en -Duser.region=US</argLine>  <!-- org.dizitart:nitrite-java:4.3.1-SNAPSHOT, line 370 -->
+        </configuration>
+      </plugin>
+      <plugin>
         <artifactId>maven-install-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <version>3.0.1</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <executions>
@@ -1169,6 +1056,15 @@
       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
         <version>3.0.0</version>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+        <executions>
+          <execution>
+            <id>default-deploy</id>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <phase>deploy</phase>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            <goals>
+              <goal>deploy</goal>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <artifactId>maven-site-plugin</artifactId>  <!-- org.apache.maven:maven-core:3.9.5:default-lifecycle-bindings -->
